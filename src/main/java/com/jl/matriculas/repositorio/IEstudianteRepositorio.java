@@ -1,0 +1,10 @@
+package com.jl.matriculas.repositorio;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import com.jl.matriculas.modelo.entidad.Estudiante;
+@Repository
+public interface IEstudianteRepositorio extends JpaRepository<Estudiante, Integer>{
+
+	Estudiante findByEmailEstuidnate(String email);
+	
+}
