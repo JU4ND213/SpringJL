@@ -8,7 +8,6 @@ import lombok.Data;
 
 import java.io.Serializable;
 
-
 @Entity
 @Data
 public class Curso implements Serializable {
