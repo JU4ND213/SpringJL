@@ -5,6 +5,6 @@ import com.jl.matriculas.modelo.entidad.Estudiante;
 @Repository
 public interface IEstudianteRepositorio extends JpaRepository<Estudiante, Integer>{
 
-	Estudiante findByEmailEstuidnate(String email);
+	Estudiante findByEmailEstudiante(String email);
 	
 }
