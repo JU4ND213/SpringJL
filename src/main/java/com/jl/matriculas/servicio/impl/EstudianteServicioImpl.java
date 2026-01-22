@@ -28,7 +28,7 @@ public class EstudianteServicioImpl implements IEstudianteServicio{
 		return repositorioEstudiante.findById(idEstudiante).get();
 	}
 
-	@Override
+	
 	public void EliminarEstudiante(int idEstudiante) {
 		// TODO Auto-generated method stub
 		repositorioEstudiante.delete(editarEstudiante(idEstudiante));
@@ -38,6 +38,12 @@ public class EstudianteServicioImpl implements IEstudianteServicio{
 	public List<Estudiante> listarEstudiante() {
 		// TODO Auto-generated method stub
 		return repositorioEstudiante.findAll();
+	}
+
+	@Override
+	public void eliminarEstudiante(int idEstudiante) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

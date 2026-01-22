@@ -12,33 +12,26 @@ import com.jl.matriculas.servicio.ICursoServicio;
 
 @Service
 @Component
+public class CursoServicioImpl implements ICursoServicio {
+   @Autowired
+   public ICursoRepositorio repositorioCurso;
 
-public class CursoServicioImpl implements ICursoServicio{
+   public CursoServicioImpl() {
+   }
 
-	@Autowired
-	public ICursoRepositorio repositorioCurso;
-	@Override
-	public Curso insertarCurso(Curso nuevoCurso) {
-		// TODO Auto-generated method stub
-		return repositorioCurso.save(nuevoCurso);
-	}
+   public Curso insertarCurso(Curso nuevoCurso) {
+      return (Curso)this.repositorioCurso.save(nuevoCurso);
+   }
 
-	@Override
-	public Curso editarCurso(int idCurso) {
-		// TODO Auto-generated method stub
-		return repositorioCurso.findById(idCurso).get();
-	}
+   public Curso editarCurso(int idCurso) {
+      return (Curso)this.repositorioCurso.findById(idCurso).get();
+   }
 
-	@Override
-	public void eliminarCurso(int idCurso) {
-		// TODO Auto-generated method stub
-		repositorioCurso.delete(editarCurso(idCurso));
-	}
+   public void eliminarCurso(int idCurso) {
+      this.repositorioCurso.delete(this.editarCurso(idCurso));
+   }
 
-	@Override
-	public List<Curso> listarCurso() {
-		// TODO Auto-generated method stub
-		return repositorioCurso.findAll();
-	}
-
+   public List<Curso> listarCurso() {
+      return this.repositorioCurso.findAll();
+   }
 }

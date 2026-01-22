@@ -1,14 +1,13 @@
 package com.jl.matriculas.servicio.impl;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-
 import com.jl.matriculas.servicio.IProfesorServicio;
 import com.jl.matriculas.modelo.entidad.Profesor;
 import com.jl.matriculas.repositorio.IProfesorRepositorio;
+
 @Service
 @Component
 public class ProfesorImpl implements IProfesorServicio {
@@ -24,7 +23,7 @@ public class ProfesorImpl implements IProfesorServicio {
 		// TODO Auto-generated method stub
 		return repositorioProfesor.findById(idProfesor).get();
 	}
-	@Override
+	
 	public void EliminarProfesor(int idProfesor) {
 		// TODO Auto-generated method stub
 		repositorioProfesor.delete(editarProfesor(idProfesor));

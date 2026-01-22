@@ -7,9 +7,11 @@ import com.jl.matriculas.modelo.entidad.Matricula;
 
 
 public interface IMatriculaServicio {
+	   Matricula insertarMatricula(Matricula nuevaMatricula);
 
-	public Matricula insertarMatricula(Matricula nuevaMatricula);
-	public Matricula editarMatricula(int idMatricula);
-	public void EliminarMatricula(int idMatricula);
-	public List<Matricula> listarMatricula();
-}
+	   Matricula editarMatricula(int idMatricula);
+
+	   void eliminarMatricula(int idMatricula);
+
+	   List<Matricula> listarMatricula();
+	}

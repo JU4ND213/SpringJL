@@ -28,7 +28,7 @@ public class MatriculaServicioImpl implements IMatriculaServicio {
 		return repositorioMatricula.findById(idMatricula).get();
 	}
 
-	@Override
+	
 	public void EliminarMatricula(int idMatricula) {
 		// TODO Auto-generated method stub
 		repositorioMatricula.delete(editarMatricula(idMatricula));
@@ -38,6 +38,12 @@ public class MatriculaServicioImpl implements IMatriculaServicio {
 	public List<Matricula> listarMatricula() {
 		// TODO Auto-generated method stub
 		return repositorioMatricula.findAll();
+	}
+
+	@Override
+	public void eliminarMatricula(int idMatricula) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

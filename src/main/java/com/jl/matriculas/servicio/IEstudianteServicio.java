@@ -5,9 +5,11 @@ import java.util.List;
 import com.jl.matriculas.modelo.entidad.Estudiante;
 
 public interface IEstudianteServicio {
+	   Estudiante insertarEstudiante(Estudiante nuevoEstudiante);
 
-	public Estudiante insertarEstudiante(Estudiante nuevoEstudiante);
-	public Estudiante editarEstudiante(int idEstudiante);
-	public void EliminarEstudiante(int idEstudiante);
-	public List<Estudiante> listarEstudiante();
-}
+	   Estudiante editarEstudiante(int idEstudiante);
+
+	   void eliminarEstudiante(int idEstudiante);
+
+	   List<Estudiante> listarEstudiante();
+	}

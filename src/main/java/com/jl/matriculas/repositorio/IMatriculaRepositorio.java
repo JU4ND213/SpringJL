@@ -10,8 +10,7 @@ import com.jl.matriculas.modelo.entidad.Matricula;
 @Repository
 public interface IMatriculaRepositorio extends JpaRepository<Matricula, Integer> {
 
-	List<Matricula> findByEstudianteIdEstudiante(int idEstudiante);
-	
-	List<Matricula> findByCursoIdCurso(int idCurso);
-	
+    List<Matricula> findByIdEstudiante(int idEstudiante);
+
+    List<Matricula> findByFkIdCurso_IdCurso(int idCurso);
 }

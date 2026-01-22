@@ -6,9 +6,11 @@ import com.jl.matriculas.modelo.entidad.Curso;
 
 
 public interface ICursoServicio {
+	   Curso insertarCurso(Curso nuevoCurso);
 
-	public Curso insertarCurso(Curso nuevoCurso);
-	public Curso editarCurso(int idCurso);
-	public void eliminarCurso (int idCurso);
-	public List<Curso> listarCurso();
-}
+	   Curso editarCurso(int idCurso);
+
+	   void eliminarCurso(int idCurso);
+
+	   List<Curso> listarCurso();
+	}
