@@ -19,59 +19,18 @@ public class Matricula implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     private int idMatricula;
-
     private Date fechaMatricula;
-
     private String descripcionMatricula;
-
     private int idEstudiante;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
     @JoinColumn(name = "fkIdCurso")
     private Curso fkIdCurso;
 
-    public Matricula() {
-    }
-
-    public int getIdMatricula() {
-        return idMatricula;
-    }
-
-    public void setIdMatricula(int idMatricula) {
-        this.idMatricula = idMatricula;
-    }
-
-    public Date getFechaMatricula() {
-        return fechaMatricula;
-    }
-
-    public void setFechaMatricula(Date fechaMatricula) {
-        this.fechaMatricula = fechaMatricula;
-    }
-
-    public String getDescripcionMatricula() {
-        return descripcionMatricula;
-    }
-
-    public void setDescripcionMatricula(String descripcionMatricula) {
-        this.descripcionMatricula = descripcionMatricula;
-    }
-
-    public int getIdEstudiante() {
-        return idEstudiante;
-    }
-
-    public void setIdEstudiante(int idEstudiante) {
-        this.idEstudiante = idEstudiante;
-    }
-
-    public Curso getFkIdCurso() {
-        return fkIdCurso;
-    }
-
-    public void setFkIdCurso(Curso fkIdCurso) {
-        this.fkIdCurso = fkIdCurso;
-    }
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
+    @JoinColumn(name = "fkIdEstudiante")
+    private Estudiante fkIdEstudiante;
 }
 
