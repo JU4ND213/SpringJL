@@ -32,5 +32,25 @@ public class Matricula implements Serializable {
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
     @JoinColumn(name = "fkIdEstudiante")
     private Estudiante fkIdEstudiante;
+
+    public void setFkIdEstudiante(Estudiante estudiante) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setFkIdEstudiante'");
+    }
+
+    public void setFkIdCurso(Curso curso) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setFkIdCurso'");
+    }
+
+    public Estudiante getFkIdEstudiante() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getFkIdEstudiante'");
+    }
+
+    public Curso getFkIdCurso() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getFkIdCurso'");
+    }
 }
 
